@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivenditore di Moto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rivenditore di Moto</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Chi Siamo</a></li>
+                <li><a href="#bikes">Moto</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Benvenuti al nostro Rivenditore di Moto</h2>
+        <p>Trova la tua moto dei sogni da noi!</p>
+    </section>
+
+    <section id="about">
+        <h2>Chi Siamo</h2>
+        <p>Siamo un rivenditore di moto con anni di esperienza nel settore. Offriamo una vasta gamma di moto per soddisfare tutte le tue esigenze.</p>
+    </section>
+
+    <section id="bikes">
+        <h2>Le Nostre Moto</h2>
+        <div class="bike" onclick="showDetails('bike1')">
+            <h3>Yamaha MT-07</h3>
+            <p>Prezzo: €7,000</p>
+        </div>
+        <div class="bike" onclick="showDetails('bike2')">
+            <h3>Honda CBR500R</h3>
+            <p>Prezzo: €6,500</p>
+        </div>
+        <div class="bike" onclick="showDetails('bike3')">
+            <h3>Kawasaki Ninja 400</h3>
+            <p>Prezzo: €6,000</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contatti</h2>
+        <form>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Messaggio:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Invia</button>
+        </form>
+    </section>
+
+    <div id="bike-details" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails()">&times;</span>
+            <div id="bike1" class="details">
+                <h3>Yamaha MT-07</h3>
+                <p>Dettagli: Moto sportiva, 689cc, 74.8 CV</p>
+            </div>
+            <div id="bike2" class="details">
+                <h3>Honda CBR500R</h3>
+                <p>Dettagli: Moto sportiva, 471cc, 47.6 CV</p>
+            </div>
+            <div id="bike3" class="details">
+                <h3>Kawasaki Ninja 400</h3>
+                <p>Dettagli: Moto sportiva, 399cc, 45 CV</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
